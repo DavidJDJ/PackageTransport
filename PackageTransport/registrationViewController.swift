@@ -16,7 +16,7 @@ class registrationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.parentViewController!.view.backgroundColor = UIColor.lightGrayColor()
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
             menuButton.action = "revealToggle:"
