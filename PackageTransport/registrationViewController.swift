@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  registrationViewController.swift
 //  PackageTransport
 //
 //  Created by David Jimenez on 9/10/15.
@@ -9,7 +9,8 @@
 import Foundation
 import UIKit
 
-class HomeViewController: UITableViewController {
+class registrationViewController: UIViewController {
+    
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
     

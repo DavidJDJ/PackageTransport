@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  loginViewController.swift
 //  PackageTransport
 //
 //  Created by David Jimenez on 9/10/15.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class HomeViewController: UITableViewController {
+class loginViewController: UIViewController {
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
     

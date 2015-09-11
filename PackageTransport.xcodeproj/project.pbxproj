@@ -8,13 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		227C7A651BA24D9A0027740D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C7A641BA24D9A0027740D /* AppDelegate.swift */; };
-		227C7A671BA24D9A0027740D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C7A661BA24D9A0027740D /* HomeViewController.swift */; };
 		227C7A6A1BA24D9A0027740D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227C7A681BA24D9A0027740D /* Main.storyboard */; };
 		227C7A6D1BA24D9A0027740D /* PackageTransport.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 227C7A6B1BA24D9A0027740D /* PackageTransport.xcdatamodeld */; };
 		227C7A6F1BA24D9A0027740D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 227C7A6E1BA24D9A0027740D /* Assets.xcassets */; };
 		227C7A721BA24D9A0027740D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227C7A701BA24D9A0027740D /* LaunchScreen.storyboard */; };
 		227C7A7D1BA24D9A0027740D /* PackageTransportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C7A7C1BA24D9A0027740D /* PackageTransportTests.swift */; };
 		227C7A881BA24D9A0027740D /* PackageTransportUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C7A871BA24D9A0027740D /* PackageTransportUITests.swift */; };
+		227C7AA51BA294BD0027740D /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 227C7AA41BA294BD0027740D /* SWRevealViewController.m */; settings = {ASSET_TAGS = (); }; };
+		227C7AA71BA297F20027740D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C7AA61BA297F20027740D /* HomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		227C7AA91BA299690027740D /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C7AA81BA299690027740D /* loginViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		227C7AAB1BA29AD40027740D /* registrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C7AAA1BA29AD40027740D /* registrationViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +40,6 @@
 /* Begin PBXFileReference section */
 		227C7A611BA24D9A0027740D /* PackageTransport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PackageTransport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		227C7A641BA24D9A0027740D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		227C7A661BA24D9A0027740D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		227C7A691BA24D9A0027740D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		227C7A6C1BA24D9A0027740D /* PackageTransport.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PackageTransport.xcdatamodel; sourceTree = "<group>"; };
 		227C7A6E1BA24D9A0027740D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +51,12 @@
 		227C7A831BA24D9A0027740D /* PackageTransportUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PackageTransportUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		227C7A871BA24D9A0027740D /* PackageTransportUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageTransportUITests.swift; sourceTree = "<group>"; };
 		227C7A891BA24D9A0027740D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		227C7AA21BA294BD0027740D /* PackageTransport-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PackageTransport-Bridging-Header.h"; sourceTree = "<group>"; };
+		227C7AA31BA294BD0027740D /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		227C7AA41BA294BD0027740D /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		227C7AA61BA297F20027740D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		227C7AA81BA299690027740D /* loginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
+		227C7AAA1BA29AD40027740D /* registrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = registrationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,11 +108,14 @@
 			isa = PBXGroup;
 			children = (
 				227C7A641BA24D9A0027740D /* AppDelegate.swift */,
-				227C7A661BA24D9A0027740D /* HomeViewController.swift */,
 				227C7A681BA24D9A0027740D /* Main.storyboard */,
+				227C7AA81BA299690027740D /* loginViewController.swift */,
+				227C7AAA1BA29AD40027740D /* registrationViewController.swift */,
 				227C7A6E1BA24D9A0027740D /* Assets.xcassets */,
 				227C7A701BA24D9A0027740D /* LaunchScreen.storyboard */,
+				227C7AA61BA297F20027740D /* HomeViewController.swift */,
 				227C7A731BA24D9A0027740D /* Info.plist */,
+				227C7AA11BA294870027740D /* SWRevealViewControllerLibrary */,
 				227C7A6B1BA24D9A0027740D /* PackageTransport.xcdatamodeld */,
 			);
 			path = PackageTransport;
@@ -126,6 +137,16 @@
 				227C7A891BA24D9A0027740D /* Info.plist */,
 			);
 			path = PackageTransportUITests;
+			sourceTree = "<group>";
+		};
+		227C7AA11BA294870027740D /* SWRevealViewControllerLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				227C7AA31BA294BD0027740D /* SWRevealViewController.h */,
+				227C7AA41BA294BD0027740D /* SWRevealViewController.m */,
+				227C7AA21BA294BD0027740D /* PackageTransport-Bridging-Header.h */,
+			);
+			name = SWRevealViewControllerLibrary;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +211,7 @@
 		227C7A591BA24D9A0027740D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "David Jimenez";
 				TargetAttributes = {
@@ -258,9 +280,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				227C7A671BA24D9A0027740D /* HomeViewController.swift in Sources */,
 				227C7A651BA24D9A0027740D /* AppDelegate.swift in Sources */,
 				227C7A6D1BA24D9A0027740D /* PackageTransport.xcdatamodeld in Sources */,
+				227C7AAB1BA29AD40027740D /* registrationViewController.swift in Sources */,
+				227C7AA51BA294BD0027740D /* SWRevealViewController.m in Sources */,
+				227C7AA71BA297F20027740D /* HomeViewController.swift in Sources */,
+				227C7AA91BA299690027740D /* loginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,10 +427,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PackageTransport/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DJ.PackageTransport;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PackageTransport/PackageTransport-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -413,10 +441,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PackageTransport/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DJ.PackageTransport;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PackageTransport/PackageTransport-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -487,6 +517,7 @@
 				227C7A8E1BA24D9A0027740D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		227C7A8F1BA24D9A0027740D /* Build configuration list for PBXNativeTarget "PackageTransportTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +526,7 @@
 				227C7A911BA24D9A0027740D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		227C7A921BA24D9A0027740D /* Build configuration list for PBXNativeTarget "PackageTransportUITests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +535,7 @@
 				227C7A941BA24D9A0027740D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
