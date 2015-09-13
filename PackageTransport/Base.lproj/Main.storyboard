@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="15A282b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="q8a-Ej-DE3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9046" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="q8a-Ej-DE3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9035"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -42,7 +42,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6vW-xD-2Fu" id="TUf-9v-TO2">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
                                 </tableViewCellContentView>
@@ -56,7 +56,11 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Home" id="vlJ-H8-Ade">
                         <barButtonItem key="leftBarButtonItem" image="menu" id="vQu-0O-UpD"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="HWW-c8-eec"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="HWW-c8-eec">
+                            <connections>
+                                <segue destination="FXS-ds-EaH" kind="presentation" identifier="AddNewPackage" id="Tpo-XU-lwG"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="menuButton" destination="vQu-0O-UpD" id="vpd-Q7-QEj"/>
@@ -65,6 +69,92 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vmj-8L-YH4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2299" y="-337"/>
+        </scene>
+        <!--Package Location-->
+        <scene sceneID="nyn-z2-3rv">
+            <objects>
+                <viewController id="qqM-sb-RpL" customClass="newPackageViewController" customModule="PackageTransport" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nC6-pw-4uI"/>
+                        <viewControllerLayoutGuide type="bottom" id="SVd-sI-HJX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="S4G-pw-xA3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Package Location" id="X4T-F4-SDU">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="pcS-t5-ugo">
+                            <connections>
+                                <action selector="cancelBarButtonPressed:" destination="qqM-sb-RpL" id="BAG-aT-SPZ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="Z7e-iz-JpW">
+                            <connections>
+                                <segue destination="724-sn-ORl" kind="show" id="XqP-GT-dIN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OXa-L6-cma" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3605" y="-337"/>
+        </scene>
+        <!--Package Details-->
+        <scene sceneID="qx3-uW-3vS">
+            <objects>
+                <viewController id="Erl-IV-GJN" customClass="newPackageViewController" customModule="PackageTransport" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cLY-3a-KfD"/>
+                        <viewControllerLayoutGuide type="bottom" id="FuM-Lj-uY7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CEd-sf-Lna">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Package Details" id="71p-5c-kg6">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="9ce-4z-jj2">
+                            <connections>
+                                <segue destination="qqM-sb-RpL" kind="show" id="4MC-cv-mRJ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="JOE-mE-FdY">
+                            <connections>
+                                <segue destination="1NZ-QN-7Z8" kind="show" id="R2Y-7z-Xw6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SMw-Q1-bdH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4922" y="-337"/>
+        </scene>
+        <!--Package Confirmation-->
+        <scene sceneID="LVv-AF-itg">
+            <objects>
+                <viewController id="cnS-uA-lrO" customClass="newPackageViewController" customModule="PackageTransport" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9hJ-KH-X1L"/>
+                        <viewControllerLayoutGuide type="bottom" id="ykb-H0-BXH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ytm-2J-ClQ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Package Confirmation" id="s4M-Da-22K">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="eHo-hY-NeP">
+                            <connections>
+                                <segue destination="Erl-IV-GJN" kind="show" id="Yxz-J3-aFF"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="riR-eA-8dG"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bEL-oy-kma" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6282" y="-337"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="F6c-4S-K9d">
@@ -518,11 +608,67 @@
             </objects>
             <point key="canvasLocation" x="1600" y="1057"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rsh-ZQ-D24">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FXS-ds-EaH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gca-hQ-PG0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qqM-sb-RpL" kind="relationship" relationship="rootViewController" id="rPH-2j-Y0h"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GuK-vU-eFD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2967" y="-337"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Yuf-Dm-1bs">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="724-sn-ORl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RPd-8J-KKa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Erl-IV-GJN" kind="relationship" relationship="rootViewController" id="HLx-fk-CzO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="80h-cr-H9Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4254" y="-337"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="myj-jE-1Ya">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1NZ-QN-7Z8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rtd-fL-Rry">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cnS-uA-lrO" kind="relationship" relationship="rootViewController" id="cdV-7D-xqA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="euc-br-IfP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5592" y="-337"/>
+        </scene>
     </scenes>
     <resources>
         <image name="menu" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="4MC-cv-mRJ"/>
+        <segue reference="Yxz-J3-aFF"/>
         <segue reference="K9b-2C-1yt"/>
     </inferredMetricsTieBreakers>
 </document>
