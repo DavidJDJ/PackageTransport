@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class HomeViewController: UITableViewController {
+class HomeViewController: UITableViewController, CancelButtonDelegate {
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
@@ -20,6 +20,18 @@ class HomeViewController: UITableViewController {
             menuButton.target = self.revealViewController()
             menuButton.action = "revealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
+    }
+    //cancel button delegate requirement to dismiss the view controller
+    func cancelButtonPressedFrom(controller: UIViewController) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    //addnewpackage segue to cancel
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "AddNewPackage" {
+            let navigationController = segue.destinationViewController as! UINavigationController
+            let controller = navigationController.topViewController as! newPackageViewController
+            controller.cancelButtonDelegate = self
         }
     }
 }

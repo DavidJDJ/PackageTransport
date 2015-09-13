@@ -18,6 +18,7 @@
 		227C7AA71BA297F20027740D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C7AA61BA297F20027740D /* HomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		227C7AA91BA299690027740D /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C7AA81BA299690027740D /* loginViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		227C7AAB1BA29AD40027740D /* registrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C7AAA1BA29AD40027740D /* registrationViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		C4379CEA1BA39B7000E9B173 /* newPackageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4379CE91BA39B7000E9B173 /* newPackageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		227C7AA61BA297F20027740D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		227C7AA81BA299690027740D /* loginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
 		227C7AAA1BA29AD40027740D /* registrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = registrationViewController.swift; sourceTree = "<group>"; };
+		C4379CE91BA39B7000E9B173 /* newPackageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newPackageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 			children = (
 				227C7A641BA24D9A0027740D /* AppDelegate.swift */,
 				227C7A681BA24D9A0027740D /* Main.storyboard */,
+				C4379CE91BA39B7000E9B173 /* newPackageViewController.swift */,
 				227C7AA81BA299690027740D /* loginViewController.swift */,
 				227C7AAA1BA29AD40027740D /* registrationViewController.swift */,
 				227C7A6E1BA24D9A0027740D /* Assets.xcassets */,
@@ -284,6 +287,7 @@
 				227C7A6D1BA24D9A0027740D /* PackageTransport.xcdatamodeld in Sources */,
 				227C7AAB1BA29AD40027740D /* registrationViewController.swift in Sources */,
 				227C7AA51BA294BD0027740D /* SWRevealViewController.m in Sources */,
+				C4379CEA1BA39B7000E9B173 /* newPackageViewController.swift in Sources */,
 				227C7AA71BA297F20027740D /* HomeViewController.swift in Sources */,
 				227C7AA91BA299690027740D /* loginViewController.swift in Sources */,
 			);
