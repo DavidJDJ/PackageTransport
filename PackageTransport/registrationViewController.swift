@@ -9,10 +9,42 @@
 import Foundation
 import UIKit
 
-class registrationViewController: UIViewController {
+class registrationViewController: UITableViewController, UITextFieldDelegate {
     
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
+    
+    @IBOutlet weak var firstNameTextField: UITextField!
+    @IBOutlet weak var lastNameTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var confirmPasswordTextField: UITextField!
+    @IBOutlet weak var typeSegmentControl: UISegmentedControl!
+    @IBOutlet weak var firstNameErrorLabel: UILabel!
+    @IBOutlet weak var lastNameErrorLabel: UILabel!
+    @IBOutlet weak var emailErrorLabel: UILabel!
+    @IBOutlet weak var passwordErrorLabel: UILabel!
+    @IBOutlet weak var confirmPasswordErrorLabel: UILabel!
+    
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        if textField == self.firstNameTextField {
+            self.lastNameTextField.becomeFirstResponder()
+        } else if textField == self.lastNameTextField {
+            self.emailTextField.becomeFirstResponder()
+        } else if textField == self.emailTextField {
+            self.passwordTextField.becomeFirstResponder()
+        } else if textField == self.passwordTextField {
+            self.confirmPasswordTextField.becomeFirstResponder()
+        } else if textField == self.confirmPasswordTextField {
+            self.confirmPasswordTextField.resignFirstResponder()
+        }
+        return true
+    }
+    
+    override func tableView(tableView: UITableView, shouldHighlightRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return false
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,5 +54,101 @@ class registrationViewController: UIViewController {
             menuButton.action = "revealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
+        
+        firstNameTextField.delegate = self
+        lastNameTextField.delegate = self
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        confirmPasswordTextField.delegate = self
     }
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        if textField == confirmPasswordTextField {
+            if confirmPasswordTextField.text != passwordTextField.text {
+                confirmPasswordErrorLabel.text = "Passwords don't match"
+            } else {
+                confirmPasswordErrorLabel.text = ""
+            }
+        }
+    }
+    
+    func isValidEmail(testStr:String) -> Bool {
+        // println("validate calendar: \(testStr)")
+        let emailRegEx = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$"
+        
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailTest.evaluateWithObject(testStr)
+    }
+    
+    @IBAction func registerButtonPressed(sender: UIButton) {
+        
+        var error = false
+        if firstNameTextField.text == "" {
+            firstNameErrorLabel.text = "Can not be empty"
+            error = true
+        } else {
+            firstNameErrorLabel.text = ""
+
+        }
+        if lastNameTextField.text == "" {
+            lastNameErrorLabel.text = "Can not be empty"
+            error = true
+        } else {
+            lastNameErrorLabel.text = ""
+
+        }
+        if !isValidEmail(emailTextField.text!) {
+            emailErrorLabel.text = "Invalid email"
+            error = true
+        } else {
+            emailErrorLabel.text = ""
+
+        }
+        if passwordTextField.text!.characters.count < 7 {
+            passwordErrorLabel.text = "Password too short"
+            error = true
+        } else {
+            passwordErrorLabel.text = ""
+        }
+        if passwordTextField.text != confirmPasswordTextField.text {
+            confirmPasswordErrorLabel.text = "Passwords don't match"
+            error = true
+        } else {
+            confirmPasswordErrorLabel.text = ""
+        }
+        
+        if error == false {
+            print(typeSegmentControl.selectedSegmentIndex)
+            var type: String?
+            if typeSegmentControl.selectedSegmentIndex == 0 {
+                type = "user"
+            } else {
+                type = "driver"
+            }
+
+            if let urlToReq = NSURL(string: "http://192.168.1.126:8000/user/add") {
+                let request: NSMutableURLRequest = NSMutableURLRequest(URL: urlToReq)
+                let session = NSURLSession.sharedSession()
+                request.HTTPMethod = "POST"
+                
+                let params = ["firstName": firstNameTextField.text, "lastName": lastNameTextField.text, "email": emailTextField.text, "password": passwordTextField.text, "confirmPassword": confirmPasswordTextField.text, "type": type] as Dictionary<String, String!>
+
+                do {
+                    request.HTTPBody = try NSJSONSerialization.dataWithJSONObject(params, options: NSJSONWritingOptions.PrettyPrinted)
+                } catch let error as NSError {
+                    print(error)
+                }
+                request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+                request.addValue("application/json", forHTTPHeaderField: "Accept")
+                
+                let task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
+                    print("response \(response)")
+                })
+                
+                task.resume()
+            }
+        
+        }
+    }
+    
 }
