@@ -12,6 +12,7 @@ import CoreData
 
 class registrationViewController: UITableViewController, UITextFieldDelegate {
     
+    let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
 
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
@@ -159,16 +160,26 @@ class registrationViewController: UITableViewController, UITextFieldDelegate {
                             self.presentViewController(alert, animated: true, completion: nil)
                         })
                     } else {
-                        let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
                         
-                        let entity = NSEntityDescription.entityForName("User", inManagedObjectContext: managedObjectContext)
-                        let user = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedObjectContext)
+
                         
-                        user.setValue(answer["id"]!, forKey: "id")
+                        let entity = NSEntityDescription.entityForName("User", inManagedObjectContext: self.managedObjectContext)
+                        let user = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: self.managedObjectContext)
+
+                        user.setValue(answer["_id"]!, forKey: "id")
                         user.setValue(answer["email"]!, forKey: "email")
                         user.setValue(answer["firstName"]!, forKey: "firstName")
                         user.setValue(answer["lastName"]!, forKey: "lastName")
                         user.setValue(answer["type"]!, forKey: "type")
+                        
+                        print(self.managedObjectContext)
+                        
+                        do {
+                            try self.managedObjectContext.save()
+                        } catch let error as NSError {
+                            print(error)
+                        }
+                        
                         print(answer)
                     }
                     

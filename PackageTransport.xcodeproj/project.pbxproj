@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		222E42091BA6ADE300E86915 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222E42071BA6ADE300E86915 /* User+CoreDataProperties.swift */; settings = {ASSET_TAGS = (); }; };
-		222E420A1BA6ADE300E86915 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222E42081BA6ADE300E86915 /* User.swift */; settings = {ASSET_TAGS = (); }; };
 		222E420E1BA6BDC000E86915 /* navbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222E420D1BA6BDC000E86915 /* navbarViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		2245AB1F1BA6C7B30009DB12 /* PackageTransport.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2245AB1D1BA6C7B30009DB12 /* PackageTransport.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
+		2245AB261BA6F4670009DB12 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2245AB241BA6F4670009DB12 /* User+CoreDataProperties.swift */; settings = {ASSET_TAGS = (); }; };
+		2245AB271BA6F4670009DB12 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2245AB251BA6F4670009DB12 /* User.swift */; settings = {ASSET_TAGS = (); }; };
 		227C7A651BA24D9A0027740D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C7A641BA24D9A0027740D /* AppDelegate.swift */; };
 		227C7A6A1BA24D9A0027740D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227C7A681BA24D9A0027740D /* Main.storyboard */; };
 		227C7A6F1BA24D9A0027740D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 227C7A6E1BA24D9A0027740D /* Assets.xcassets */; };
@@ -20,7 +21,6 @@
 		227C7AA71BA297F20027740D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C7AA61BA297F20027740D /* HomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		227C7AA91BA299690027740D /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C7AA81BA299690027740D /* loginViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		227C7AAB1BA29AD40027740D /* registrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C7AAA1BA29AD40027740D /* registrationViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		22B050CC1BA6C43600D43978 /* PackageTransport.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 22B050C91BA6C43600D43978 /* PackageTransport.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
 		C4379CEA1BA39B7000E9B173 /* newPackageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4379CE91BA39B7000E9B173 /* newPackageViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,9 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		222E42071BA6ADE300E86915 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		222E42081BA6ADE300E86915 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		222E420D1BA6BDC000E86915 /* navbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = navbarViewController.swift; sourceTree = "<group>"; };
+		2245AB1E1BA6C7B30009DB12 /* PackageTransport.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PackageTransport.xcdatamodel; sourceTree = "<group>"; };
+		2245AB241BA6F4670009DB12 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2245AB251BA6F4670009DB12 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		227C7A611BA24D9A0027740D /* PackageTransport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PackageTransport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		227C7A641BA24D9A0027740D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		227C7A691BA24D9A0027740D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,8 +64,6 @@
 		227C7AA61BA297F20027740D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		227C7AA81BA299690027740D /* loginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
 		227C7AAA1BA29AD40027740D /* registrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = registrationViewController.swift; sourceTree = "<group>"; };
-		22B050CA1BA6C43600D43978 /* PackageTransport 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "PackageTransport 2.xcdatamodel"; sourceTree = "<group>"; };
-		22B050CB1BA6C43600D43978 /* PackageTransport.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PackageTransport.xcdatamodel; sourceTree = "<group>"; };
 		C4379CE91BA39B7000E9B173 /* newPackageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newPackageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,8 +95,8 @@
 		227C7A581BA24D9A0027740D = {
 			isa = PBXGroup;
 			children = (
-				222E42071BA6ADE300E86915 /* User+CoreDataProperties.swift */,
-				222E42081BA6ADE300E86915 /* User.swift */,
+				2245AB241BA6F4670009DB12 /* User+CoreDataProperties.swift */,
+				2245AB251BA6F4670009DB12 /* User.swift */,
 				227C7A631BA24D9A0027740D /* PackageTransport */,
 				227C7A7B1BA24D9A0027740D /* PackageTransportTests */,
 				227C7A861BA24D9A0027740D /* PackageTransportUITests */,
@@ -128,6 +127,7 @@
 				227C7A701BA24D9A0027740D /* LaunchScreen.storyboard */,
 				227C7AA61BA297F20027740D /* HomeViewController.swift */,
 				227C7A731BA24D9A0027740D /* Info.plist */,
+				2245AB1D1BA6C7B30009DB12 /* PackageTransport.xcdatamodeld */,
 				227C7AA11BA294870027740D /* SWRevealViewControllerLibrary */,
 			);
 			path = PackageTransport;
@@ -157,7 +157,6 @@
 				227C7AA31BA294BD0027740D /* SWRevealViewController.h */,
 				227C7AA41BA294BD0027740D /* SWRevealViewController.m */,
 				227C7AA21BA294BD0027740D /* PackageTransport-Bridging-Header.h */,
-				22B050C91BA6C43600D43978 /* PackageTransport.xcdatamodeld */,
 			);
 			name = SWRevealViewControllerLibrary;
 			sourceTree = "<group>";
@@ -293,16 +292,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22B050CC1BA6C43600D43978 /* PackageTransport.xcdatamodeld in Sources */,
+				2245AB1F1BA6C7B30009DB12 /* PackageTransport.xcdatamodeld in Sources */,
 				227C7A651BA24D9A0027740D /* AppDelegate.swift in Sources */,
-				222E42091BA6ADE300E86915 /* User+CoreDataProperties.swift in Sources */,
 				227C7AAB1BA29AD40027740D /* registrationViewController.swift in Sources */,
 				222E420E1BA6BDC000E86915 /* navbarViewController.swift in Sources */,
 				227C7AA51BA294BD0027740D /* SWRevealViewController.m in Sources */,
-				222E420A1BA6ADE300E86915 /* User.swift in Sources */,
 				C4379CEA1BA39B7000E9B173 /* newPackageViewController.swift in Sources */,
 				227C7AA71BA297F20027740D /* HomeViewController.swift in Sources */,
 				227C7AA91BA299690027740D /* loginViewController.swift in Sources */,
+				2245AB271BA6F4670009DB12 /* User.swift in Sources */,
+				2245AB261BA6F4670009DB12 /* User+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,13 +556,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		22B050C91BA6C43600D43978 /* PackageTransport.xcdatamodeld */ = {
+		2245AB1D1BA6C7B30009DB12 /* PackageTransport.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				22B050CA1BA6C43600D43978 /* PackageTransport 2.xcdatamodel */,
-				22B050CB1BA6C43600D43978 /* PackageTransport.xcdatamodel */,
+				2245AB1E1BA6C7B30009DB12 /* PackageTransport.xcdatamodel */,
 			);
-			currentVersion = 22B050CA1BA6C43600D43978 /* PackageTransport 2.xcdatamodel */;
+			currentVersion = 2245AB1E1BA6C7B30009DB12 /* PackageTransport.xcdatamodel */;
 			path = PackageTransport.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
