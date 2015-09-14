@@ -8,9 +8,11 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class registrationViewController: UITableViewController, UITextFieldDelegate {
     
+
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
@@ -139,7 +141,7 @@ class registrationViewController: UITableViewController, UITextFieldDelegate {
 
                 let task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
                 
-                        func parseJSON(inputData: NSData) -> NSDictionary {
+                    func parseJSON(inputData: NSData) -> NSDictionary {
                         var arrOfObjects: NSDictionary?
                         do {
                             arrOfObjects = try NSJSONSerialization.JSONObjectWithData(inputData, options: NSJSONReadingOptions.MutableContainers) as? NSDictionary
@@ -148,14 +150,26 @@ class registrationViewController: UITableViewController, UITextFieldDelegate {
                         }
                         return arrOfObjects!
                     }
+                    
                     let answer = parseJSON(data!)
                     if (answer["error"] != nil) {
-                        
                         dispatch_async(dispatch_get_main_queue(), {
                             let alert = UIAlertController(title: "Error", message: answer["error"]! as? String, preferredStyle: UIAlertControllerStyle.Alert)
                             alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default, handler: nil))
                             self.presentViewController(alert, animated: true, completion: nil)
                         })
+                    } else {
+                        let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+                        
+                        let entity = NSEntityDescription.entityForName("User", inManagedObjectContext: managedObjectContext)
+                        let user = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedObjectContext)
+                        
+                        user.setValue(answer["id"]!, forKey: "id")
+                        user.setValue(answer["email"]!, forKey: "email")
+                        user.setValue(answer["firstName"]!, forKey: "firstName")
+                        user.setValue(answer["lastName"]!, forKey: "lastName")
+                        user.setValue(answer["type"]!, forKey: "type")
+                        print(answer)
                     }
                     
                 })

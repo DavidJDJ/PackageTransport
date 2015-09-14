@@ -159,10 +159,10 @@
             </objects>
             <point key="canvasLocation" x="6282" y="-337"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Navbar View Controller-->
         <scene sceneID="F6c-4S-K9d">
             <objects>
-                <tableViewController id="b4E-q3-3s0" sceneMemberID="viewController">
+                <tableViewController id="b4E-q3-3s0" customClass="navbarViewController" customModule="PackageTransport" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="zvY-RO-ira">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -250,7 +250,7 @@
                                         <animations/>
                                         <color key="backgroundColor" red="0.94085192679999996" green="0.94903725390000004" blue="0.95307987930000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <segue destination="ciz-d4-ZkE" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="6t4-Dd-Vao"/>
+                                            <segue destination="ciz-d4-ZkE" kind="custom" identifier="navbarLogin" customClass="SWRevealViewControllerSeguePushController" id="6t4-Dd-Vao"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="btX-gu-qHD">
@@ -280,6 +280,38 @@
                                         <connections>
                                             <segue destination="Qtx-v8-Ny2" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="ukD-WO-pCO"/>
                                         </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="9YL-an-yo2">
+                                        <rect key="frame" x="0.0" y="176" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9YL-an-yo2" id="lXS-MZ-h9K">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8GQ-0f-3bj">
+                                                    <rect key="frame" x="32" y="10" width="35" height="24"/>
+                                                    <animations/>
+                                                    <state key="normal" image="ic_exit_to_app"/>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Logout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kTn-u3-Q1I">
+                                                    <rect key="frame" x="63" y="11" width="529" height="21"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstItem="kTn-u3-Q1I" firstAttribute="leading" secondItem="lXS-MZ-h9K" secondAttribute="leadingMargin" constant="55" id="CpQ-Hs-pxj"/>
+                                                <constraint firstItem="8GQ-0f-3bj" firstAttribute="leading" secondItem="lXS-MZ-h9K" secondAttribute="leadingMargin" constant="24" id="KXp-h1-dV4"/>
+                                                <constraint firstItem="8GQ-0f-3bj" firstAttribute="centerY" secondItem="lXS-MZ-h9K" secondAttribute="centerY" id="TtC-vO-IBX"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="kTn-u3-Q1I" secondAttribute="trailing" id="ce4-R6-iVx"/>
+                                                <constraint firstItem="kTn-u3-Q1I" firstAttribute="centerY" secondItem="lXS-MZ-h9K" secondAttribute="centerY" id="mWC-wJ-56c"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.94085192679999996" green="0.94903725390000004" blue="0.95307987930000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -590,7 +622,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DH7-ZP-v2O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2299" y="1057"/>
+            <point key="canvasLocation" x="2299" y="1127"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kVK-Y3-pwo">
@@ -609,7 +641,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="njv-YR-Sw5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1600" y="1057"/>
+            <point key="canvasLocation" x="1602" y="1127"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rsh-ZQ-D24">
@@ -670,6 +702,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ic_exit_to_app" width="24" height="24"/>
         <image name="menu" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
