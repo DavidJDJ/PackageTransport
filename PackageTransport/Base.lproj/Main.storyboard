@@ -250,7 +250,7 @@
                                         <animations/>
                                         <color key="backgroundColor" red="0.94085192679999996" green="0.94903725390000004" blue="0.95307987930000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <segue destination="ciz-d4-ZkE" kind="custom" identifier="navbarLogin" customClass="SWRevealViewControllerSeguePushController" id="6t4-Dd-Vao"/>
+                                            <segue destination="CKI-DU-Jqv" kind="custom" identifier="navbarLogin" customClass="SWRevealViewControllerSeguePushController" id="cxc-Qt-qq8"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="btX-gu-qHD">
@@ -346,48 +346,38 @@
             <point key="canvasLocation" x="1602" y="-337"/>
         </scene>
         <!--Login-->
-        <scene sceneID="cKU-QQ-ccG">
+        <scene sceneID="0m1-YY-LqX">
             <objects>
-                <viewController id="erh-sM-hpY" customClass="loginViewController" customModule="PackageTransport" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="bun-MN-6Qd"/>
-                        <viewControllerLayoutGuide type="bottom" id="Tsa-zB-317"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="zGH-Pd-HFO">
+                <tableViewController id="Rw5-R1-IiW" customClass="loginViewController" customModule="PackageTransport" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Pi6-cx-xo6">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Login" id="zXN-zz-foV">
-                        <barButtonItem key="leftBarButtonItem" image="menu" id="kvk-wo-Qt3"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="p2q-l5-mAn">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="p2q-l5-mAn" id="33l-2U-j6R">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Rw5-R1-IiW" id="GKc-Mi-KTu"/>
+                            <outlet property="delegate" destination="Rw5-R1-IiW" id="Grn-Tp-Wny"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Login" id="X86-ew-x5l">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="ki4-ld-aKl"/>
                     </navigationItem>
-                    <connections>
-                        <outlet property="menuButton" destination="kvk-wo-Qt3" id="ctY-SE-SWV"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Rfc-8k-mmq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="whd-DW-eBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2299" y="381"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="ChD-jb-ET0">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ciz-d4-ZkE" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Tm6-Pt-4do">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="erh-sM-hpY" kind="relationship" relationship="rootViewController" id="9gD-yo-8bf"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5Pu-Hr-VBO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1602" y="381"/>
         </scene>
         <!--Register-->
         <scene sceneID="LUL-Xi-iuM">
@@ -618,11 +608,72 @@
                         <outlet property="passwordErrorLabel" destination="gBP-Jj-8EP" id="54K-yd-LNp"/>
                         <outlet property="passwordTextField" destination="iHh-gV-6ez" id="gYy-qx-hsI"/>
                         <outlet property="typeSegmentControl" destination="KEf-yv-hUs" id="XA0-NI-4fB"/>
+                        <segue destination="nuL-XD-Erf" kind="show" identifier="registerToWelcome" customClass="SWRevealViewControllerSeguePushController" id="19U-Iw-IaF"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DH7-ZP-v2O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2299" y="1127"/>
+        </scene>
+        <!--Welcome View Controller-->
+        <scene sceneID="zeT-0l-vU4">
+            <objects>
+                <viewController id="nuL-XD-Erf" customClass="welcomeViewController" customModule="PackageTransport" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4su-4a-aWA"/>
+                        <viewControllerLayoutGuide type="bottom" id="dp7-cB-Nq6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="K97-9l-jEk">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKo-Qm-EMh">
+                                <rect key="frame" x="20" y="266" width="560" height="67"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wVE-mF-heA">
+                                <rect key="frame" x="281" y="450" width="39" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Begin"/>
+                                <connections>
+                                    <segue destination="Fqc-Ma-2G7" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="hQg-aI-Sch"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GjB-Do-TGg">
+                                <rect key="frame" x="20" y="272" width="560" height="55"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GjB-Do-TGg" firstAttribute="centerX" secondItem="K97-9l-jEk" secondAttribute="centerX" id="6dv-Yn-FV4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GjB-Do-TGg" secondAttribute="trailing" id="7hS-OI-U10"/>
+                            <constraint firstItem="gKo-Qm-EMh" firstAttribute="centerX" secondItem="K97-9l-jEk" secondAttribute="centerX" id="BTr-pF-m5t"/>
+                            <constraint firstItem="dp7-cB-Nq6" firstAttribute="top" secondItem="wVE-mF-heA" secondAttribute="bottom" constant="120" id="IX5-gI-nRu"/>
+                            <constraint firstItem="GjB-Do-TGg" firstAttribute="centerY" secondItem="K97-9l-jEk" secondAttribute="centerY" id="InY-8v-A6S"/>
+                            <constraint firstItem="gKo-Qm-EMh" firstAttribute="leading" secondItem="K97-9l-jEk" secondAttribute="leadingMargin" id="QxD-7y-5fR"/>
+                            <constraint firstItem="wVE-mF-heA" firstAttribute="centerX" secondItem="K97-9l-jEk" secondAttribute="centerX" id="T2h-6E-ym2"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="GjB-Do-TGg" secondAttribute="leading" id="cdw-KQ-J5s"/>
+                            <constraint firstItem="gKo-Qm-EMh" firstAttribute="trailing" secondItem="K97-9l-jEk" secondAttribute="trailingMargin" id="o7i-Xa-tog"/>
+                            <constraint firstItem="gKo-Qm-EMh" firstAttribute="centerY" secondItem="K97-9l-jEk" secondAttribute="centerY" id="qAu-Js-KDH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="beginButton" destination="wVE-mF-heA" id="tph-Qk-Rvr"/>
+                        <outlet property="messageLabel" destination="GjB-Do-TGg" id="Kt4-w7-yuM"/>
+                        <outlet property="welcomeLabel" destination="gKo-Qm-EMh" id="yss-Wb-f5r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lme-ls-wLw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2967" y="1127"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kVK-Y3-pwo">
@@ -700,14 +751,33 @@
             </objects>
             <point key="canvasLocation" x="5592" y="-337"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7SY-dX-mqL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CKI-DU-Jqv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IJY-jB-qc3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Rw5-R1-IiW" kind="relationship" relationship="rootViewController" id="eV2-zf-wSA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z8H-LE-fFL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1602" y="381"/>
+        </scene>
     </scenes>
     <resources>
         <image name="ic_exit_to_app" width="24" height="24"/>
         <image name="menu" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="K9b-2C-1yt"/>
         <segue reference="4MC-cv-mRJ"/>
         <segue reference="Yxz-J3-aFF"/>
-        <segue reference="K9b-2C-1yt"/>
     </inferredMetricsTieBreakers>
 </document>

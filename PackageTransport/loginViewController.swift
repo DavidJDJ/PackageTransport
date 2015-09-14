@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import CoreData
 
-class loginViewController: UIViewController {
+class loginViewController: UITableViewController {
     
     let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
 
@@ -26,18 +26,7 @@ class loginViewController: UIViewController {
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         
-//        let userRequest = NSFetchRequest(entityName: "User")
-//        do {
-//            let users = try managedObjectContext.executeFetchRequest(userRequest) as? [User]
-////            for user in users {
-////                print("\(user.firstName) - \(user.email)")
-////            }
-//            print(users)
-//        } catch let error as NSError {
-//            print(error)
-//        }
-//        
-//        
+
         
         let userRequest = NSFetchRequest(entityName: "User")
         do {

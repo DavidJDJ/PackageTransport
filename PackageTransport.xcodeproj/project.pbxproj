@@ -21,6 +21,7 @@
 		227C7AA71BA297F20027740D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C7AA61BA297F20027740D /* HomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		227C7AA91BA299690027740D /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C7AA81BA299690027740D /* loginViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		227C7AAB1BA29AD40027740D /* registrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C7AAA1BA29AD40027740D /* registrationViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		228AE35C1BA7064000D34339 /* welcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228AE35B1BA7064000D34339 /* welcomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		C4379CEA1BA39B7000E9B173 /* newPackageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4379CE91BA39B7000E9B173 /* newPackageViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		227C7AA61BA297F20027740D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		227C7AA81BA299690027740D /* loginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
 		227C7AAA1BA29AD40027740D /* registrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = registrationViewController.swift; sourceTree = "<group>"; };
+		228AE35B1BA7064000D34339 /* welcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = welcomeViewController.swift; sourceTree = "<group>"; };
 		C4379CE91BA39B7000E9B173 /* newPackageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newPackageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,6 +123,7 @@
 				227C7A681BA24D9A0027740D /* Main.storyboard */,
 				222E420D1BA6BDC000E86915 /* navbarViewController.swift */,
 				C4379CE91BA39B7000E9B173 /* newPackageViewController.swift */,
+				228AE35B1BA7064000D34339 /* welcomeViewController.swift */,
 				227C7AA81BA299690027740D /* loginViewController.swift */,
 				227C7AAA1BA29AD40027740D /* registrationViewController.swift */,
 				227C7A6E1BA24D9A0027740D /* Assets.xcassets */,
@@ -299,6 +302,7 @@
 				227C7AA51BA294BD0027740D /* SWRevealViewController.m in Sources */,
 				C4379CEA1BA39B7000E9B173 /* newPackageViewController.swift in Sources */,
 				227C7AA71BA297F20027740D /* HomeViewController.swift in Sources */,
+				228AE35C1BA7064000D34339 /* welcomeViewController.swift in Sources */,
 				227C7AA91BA299690027740D /* loginViewController.swift in Sources */,
 				2245AB271BA6F4670009DB12 /* User.swift in Sources */,
 				2245AB261BA6F4670009DB12 /* User+CoreDataProperties.swift in Sources */,

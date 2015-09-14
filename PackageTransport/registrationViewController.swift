@@ -161,8 +161,6 @@ class registrationViewController: UITableViewController, UITextFieldDelegate {
                         })
                     } else {
                         
-
-                        
                         let entity = NSEntityDescription.entityForName("User", inManagedObjectContext: self.managedObjectContext)
                         let user = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: self.managedObjectContext)
 
@@ -172,15 +170,22 @@ class registrationViewController: UITableViewController, UITextFieldDelegate {
                         user.setValue(answer["lastName"]!, forKey: "lastName")
                         user.setValue(answer["type"]!, forKey: "type")
                         
-                        print(self.managedObjectContext)
+                        var succesfullSave = true
                         
                         do {
                             try self.managedObjectContext.save()
-                        } catch let error as NSError {
-                            print(error)
+                        } catch let saveError as NSError {
+                            print(saveError)
+                            succesfullSave = false
                         }
                         
                         print(answer)
+                        
+                        if succesfullSave == true {
+                            dispatch_async(dispatch_get_main_queue()) {
+                                self.performSegueWithIdentifier("registerToWelcome", sender: nil)
+                            }
+                        }
                     }
                     
                 })
