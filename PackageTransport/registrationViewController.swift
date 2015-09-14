@@ -73,13 +73,13 @@ class registrationViewController: UITableViewController, UITextFieldDelegate {
     }
     
     func isValidEmail(testStr:String) -> Bool {
-        // println("validate calendar: \(testStr)")
         let emailRegEx = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$"
         
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailTest.evaluateWithObject(testStr)
     }
     
+
     @IBAction func registerButtonPressed(sender: UIButton) {
         
         var error = false
@@ -88,21 +88,18 @@ class registrationViewController: UITableViewController, UITextFieldDelegate {
             error = true
         } else {
             firstNameErrorLabel.text = ""
-
         }
         if lastNameTextField.text == "" {
             lastNameErrorLabel.text = "Can not be empty"
             error = true
         } else {
             lastNameErrorLabel.text = ""
-
         }
         if !isValidEmail(emailTextField.text!) {
             emailErrorLabel.text = "Invalid email"
             error = true
         } else {
             emailErrorLabel.text = ""
-
         }
         if passwordTextField.text!.characters.count < 7 {
             passwordErrorLabel.text = "Password too short"
@@ -118,7 +115,6 @@ class registrationViewController: UITableViewController, UITextFieldDelegate {
         }
         
         if error == false {
-            print(typeSegmentControl.selectedSegmentIndex)
             var type: String?
             if typeSegmentControl.selectedSegmentIndex == 0 {
                 type = "user"
@@ -140,14 +136,34 @@ class registrationViewController: UITableViewController, UITextFieldDelegate {
                 }
                 request.addValue("application/json", forHTTPHeaderField: "Content-Type")
                 request.addValue("application/json", forHTTPHeaderField: "Accept")
-                
+
                 let task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
-                    print("response \(response)")
+                
+                        func parseJSON(inputData: NSData) -> NSDictionary {
+                        var arrOfObjects: NSDictionary?
+                        do {
+                            arrOfObjects = try NSJSONSerialization.JSONObjectWithData(inputData, options: NSJSONReadingOptions.MutableContainers) as? NSDictionary
+                        } catch let error as NSError {
+                            print(error)
+                        }
+                        return arrOfObjects!
+                    }
+                    let answer = parseJSON(data!)
+                    if (answer["error"] != nil) {
+                        
+                        dispatch_async(dispatch_get_main_queue(), {
+                            let alert = UIAlertController(title: "Error", message: answer["error"]! as? String, preferredStyle: UIAlertControllerStyle.Alert)
+                            alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default, handler: nil))
+                            self.presentViewController(alert, animated: true, completion: nil)
+                        })
+                    }
+                    
                 })
                 
                 task.resume()
+                
             }
-        
+
         }
     }
     
