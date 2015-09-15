@@ -124,13 +124,31 @@ class registrationViewController: UITableViewController, UITextFieldDelegate {
             } else {
                 type = "driver"
             }
+            
+            let userRequest = NSFetchRequest(entityName: "User")
+            do {
+                let users = try managedObjectContext.executeFetchRequest(userRequest) as? [User]
+                for user in users! {
+                    print("\(user.firstName) - \(user.email)")
+                    managedObjectContext.deleteObject(user)
+                    
+                    do {
+                        try managedObjectContext.save()
+                    } catch let error as NSError {
+                        print(error)
+                    }
+                    
+                }
+            } catch let error as NSError {
+                print(error)
+            }
 
             if let urlToReq = NSURL(string: "http://192.168.1.126:8000/user/add") {
                 let request: NSMutableURLRequest = NSMutableURLRequest(URL: urlToReq)
                 let session = NSURLSession.sharedSession()
                 request.HTTPMethod = "POST"
                 
-                let params = ["firstName": firstNameTextField.text, "lastName": lastNameTextField.text, "email": emailTextField.text, "password": passwordTextField.text, "confirmPassword": confirmPasswordTextField.text, "type": type] as Dictionary<String, String!>
+                let params = ["firstName": firstNameTextField.text, "lastName": lastNameTextField.text, "email": emailTextField.text?.lowercaseString, "password": passwordTextField.text, "confirmPassword": confirmPasswordTextField.text, "type": type] as Dictionary<String, String!>
 
                 do {
                     request.HTTPBody = try NSJSONSerialization.dataWithJSONObject(params, options: NSJSONWritingOptions.PrettyPrinted)

@@ -8,8 +8,12 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class HomeViewController: UITableViewController, CancelButtonDelegate {
+    
+    let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
@@ -21,6 +25,17 @@ class HomeViewController: UITableViewController, CancelButtonDelegate {
             menuButton.action = "revealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
+        
+        let userRequest = NSFetchRequest(entityName: "User")
+        do {
+            let users = try managedObjectContext.executeFetchRequest(userRequest) as? [User]
+            for user in users! {
+                print("\(user.firstName) - \(user.email)")
+            }
+        } catch let error as NSError {
+            print(error)
+        }
+        
     }
     //cancel button delegate requirement to dismiss the view controller
     func cancelButtonPressedFrom(controller: UIViewController) {
