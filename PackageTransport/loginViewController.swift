@@ -33,7 +33,7 @@ class loginViewController: UITableViewController, UITextFieldDelegate {
         do {
             let users = try managedObjectContext.executeFetchRequest(userRequest) as? [User]
             for user in users! {
-                print("\(user.firstName) - \(user.email)")
+                print("\(user.firstName) - \(user.email) - \(user.type)")
             }
 //            print(users)
         } catch let error as NSError {
@@ -149,6 +149,10 @@ class loginViewController: UITableViewController, UITextFieldDelegate {
                         print(answer)
                         
                         if succesfullSave == true {
+                            dispatch_async(dispatch_get_main_queue()) {
+                                self.performSegueWithIdentifier("loginToHome", sender: nil)
+
+                            }
                             
                         }
                     }
@@ -162,7 +166,6 @@ class loginViewController: UITableViewController, UITextFieldDelegate {
             }
         }
         
-        print("button pressed")
     }
     
 }

@@ -64,7 +64,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="menuButton" destination="vQu-0O-UpD" id="vpd-Q7-QEj"/>
-                        <segue destination="Im4-kH-A5e" kind="custom" identifier="userHomeToDriverHome" customClass="SWRevealViewControllerSeguePushController" id="ALT-fp-mYk"/>
+                        <segue destination="Im4-kH-A5e" kind="custom" identifier="userHomeToDriverHome" customClass="SWRevealViewControllerSeguePushController" id="99I-XX-oeO"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vmj-8L-YH4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -163,6 +163,7 @@
                         <outlet property="emailLabel" destination="2ao-jB-Vng" id="avG-0c-7YK"/>
                         <outlet property="menuButton" destination="d1J-NM-EHx" id="Ob7-Bk-j63"/>
                         <outlet property="passwordLabel" destination="qAD-1e-R17" id="OtT-Ua-K0h"/>
+                        <segue destination="Fqc-Ma-2G7" kind="custom" identifier="loginToHome" customClass="SWRevealViewControllerSeguePushController" id="4Z0-IH-gSh"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zfq-tj-2PS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -320,9 +321,6 @@
                                         </tableViewCellContentView>
                                         <animations/>
                                         <color key="backgroundColor" red="0.94085192679999996" green="0.94903725390000004" blue="0.95307987930000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <connections>
-                                            <segue destination="Fqc-Ma-2G7" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="K9b-2C-1yt"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Igl-Id-317">
                                         <rect key="frame" x="0.0" y="88" width="600" height="44"/>
@@ -349,7 +347,7 @@
                                         <animations/>
                                         <color key="backgroundColor" red="0.94085192679999996" green="0.94903725390000004" blue="0.95307987930000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <segue destination="N6V-Xt-ATl" kind="custom" identifier="navbarLogin" customClass="SWRevealViewControllerSeguePushController" id="pk8-1f-Pp2"/>
+                                            <segue destination="N6V-Xt-ATl" kind="custom" identifier="navbarLogin" customClass="SWRevealViewControllerSeguePushController" id="irk-ca-ai2"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="btX-gu-qHD">
@@ -420,6 +418,10 @@
                             <outlet property="delegate" destination="b4E-q3-3s0" id="dBw-iP-2zo"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="Fqc-Ma-2G7" kind="custom" identifier="navbarToHome" customClass="SWRevealViewControllerSeguePushController" id="7sg-A8-lSV"/>
+                        <segue destination="Im4-kH-A5e" kind="custom" identifier="navbarToDriverHome" customClass="SWRevealViewControllerSeguePushController" id="Xr7-HA-6Tv"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dZU-hJ-t68" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -428,7 +430,7 @@
         <!--Driver Home-->
         <scene sceneID="rdN-zq-Q3h">
             <objects>
-                <tableViewController id="vbM-Or-iPC" sceneMemberID="viewController">
+                <tableViewController id="vbM-Or-iPC" customClass="driverHomeViewController" customModule="PackageTransport" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="4zm-Ds-79J">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -454,6 +456,9 @@
                     <navigationItem key="navigationItem" title="Driver Home" id="FyZ-lM-Ocg">
                         <barButtonItem key="leftBarButtonItem" image="menu" id="fZp-eR-WXm"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="menuButton" destination="fZp-eR-WXm" id="Uof-gP-Mrk"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wbE-HU-a4k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -894,8 +899,9 @@
         <image name="menu" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rPH-2j-Y0h"/>
-        <segue reference="hQg-aI-Sch"/>
         <segue reference="Yxz-J3-aFF"/>
+        <segue reference="z7u-ig-8ub"/>
+        <segue reference="rPH-2j-Y0h"/>
+        <segue reference="Xr7-HA-6Tv"/>
     </inferredMetricsTieBreakers>
 </document>

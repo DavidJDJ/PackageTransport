@@ -30,7 +30,10 @@ class HomeViewController: UITableViewController, CancelButtonDelegate {
         do {
             let users = try managedObjectContext.executeFetchRequest(userRequest) as? [User]
             for user in users! {
-                print("\(user.firstName) - \(user.email)")
+                print("\(user.firstName) - \(user.email) - \(user.type)")
+            }
+            if users?.first?.type == "driver" {
+                performSegueWithIdentifier("userHomeToDriverHome", sender: nil)
             }
         } catch let error as NSError {
             print(error)

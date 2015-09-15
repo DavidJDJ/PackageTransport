@@ -34,10 +34,10 @@ class welcomeViewController: UIViewController {
         
         UIView.animateWithDuration(1.5, delay: 2, options: [], animations: {
             self.welcomeLabel.frame = CGRectMake(self.welcomeLabel.frame.minX, self.welcomeLabel.frame.minY - 50, self.welcomeLabel.frame.width, self.welcomeLabel.frame.height)
-            self.beginButton.alpha = 1.0
         }, completion: nil)
         UIView.animateWithDuration(1.5, delay: 3.5, options: [], animations: {
             self.messageLabel.alpha = 1.0
+            self.beginButton.alpha = 1.0
         }, completion: nil)
     }
     
