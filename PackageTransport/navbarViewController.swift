@@ -27,7 +27,12 @@ class navbarViewController: UITableViewController {
             print(error)
         }
     }
-
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "loginToHome" {
+            
+        }
+    }
  
      override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.row == 1 {
