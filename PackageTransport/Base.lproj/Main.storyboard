@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="15A282b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="q8a-Ej-DE3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9046" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="q8a-Ej-DE3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9035"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -42,7 +42,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6vW-xD-2Fu" id="TUf-9v-TO2">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
                                 </tableViewCellContentView>
@@ -58,7 +58,7 @@
                         <barButtonItem key="leftBarButtonItem" image="menu" id="vQu-0O-UpD"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="HWW-c8-eec">
                             <connections>
-                                <segue destination="FXS-ds-EaH" kind="presentation" identifier="AddNewPackage" id="Tpo-XU-lwG"/>
+                                <segue destination="qqM-sb-RpL" kind="show" id="ZyU-Vx-MVu"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -96,7 +96,7 @@
                                         <rect key="frame" x="0.0" y="64" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cyE-wI-YvN" id="6pS-Qk-NxB">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2ao-jB-Vng">
@@ -128,7 +128,7 @@
                                         <rect key="frame" x="0.0" y="108" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OS8-BR-ohD" id="066-5Z-CnD">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qAD-1e-R17">
@@ -181,21 +181,36 @@
                     <view key="view" contentMode="scaleToFill" id="S4G-pw-xA3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J2p-FU-AaO">
+                                <rect key="frame" x="20" y="72" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="J2p-FU-AaO" firstAttribute="top" secondItem="nC6-pw-4uI" secondAttribute="bottom" constant="8" id="Edx-Xo-KQr"/>
+                            <constraint firstItem="J2p-FU-AaO" firstAttribute="leading" secondItem="S4G-pw-xA3" secondAttribute="leadingMargin" id="GJh-eA-Bgt"/>
+                            <constraint firstItem="J2p-FU-AaO" firstAttribute="trailing" secondItem="S4G-pw-xA3" secondAttribute="trailingMargin" id="l7i-71-yDu"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Package Location" id="X4T-F4-SDU">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="pcS-t5-ugo">
                             <connections>
-                                <action selector="cancelBarButtonPressed:" destination="qqM-sb-RpL" id="BAG-aT-SPZ"/>
+                                <segue destination="r6v-qY-fkC" kind="show" id="ecx-Ju-BNI"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Next" id="Z7e-iz-JpW">
                             <connections>
-                                <segue destination="724-sn-ORl" kind="show" id="XqP-GT-dIN"/>
+                                <segue destination="724-sn-ORl" kind="show" identifier="PackageLocationNextButton" id="XqP-GT-dIN"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="PackageLocationTextField" destination="J2p-FU-AaO" id="diG-Ld-VqE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OXa-L6-cma" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -212,21 +227,36 @@
                     <view key="view" contentMode="scaleToFill" id="CEd-sf-Lna">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i5Z-EG-EL7">
+                                <rect key="frame" x="20" y="72" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="i5Z-EG-EL7" firstAttribute="top" secondItem="cLY-3a-KfD" secondAttribute="bottom" constant="8" id="ImI-3U-VLM"/>
+                            <constraint firstItem="i5Z-EG-EL7" firstAttribute="trailing" secondItem="CEd-sf-Lna" secondAttribute="trailingMargin" id="Rw7-Ea-rdC"/>
+                            <constraint firstItem="i5Z-EG-EL7" firstAttribute="leading" secondItem="CEd-sf-Lna" secondAttribute="leadingMargin" id="dvg-zt-IxF"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Package Details" id="71p-5c-kg6">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="9ce-4z-jj2">
                             <connections>
-                                <segue destination="qqM-sb-RpL" kind="show" id="4MC-cv-mRJ"/>
+                                <segue destination="qqM-sb-RpL" kind="show" identifier="PackageDetailsBackButton" id="cpb-NV-lVB"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Next" id="JOE-mE-FdY">
                             <connections>
-                                <segue destination="1NZ-QN-7Z8" kind="show" id="R2Y-7z-Xw6"/>
+                                <segue destination="1NZ-QN-7Z8" kind="show" identifier="PackageDetailsNextButton" id="R2Y-7z-Xw6"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="PackageDetailsTextField" destination="i5Z-EG-EL7" id="m2w-O5-98N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SMw-Q1-bdH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -243,8 +273,30 @@
                     <view key="view" contentMode="scaleToFill" id="Ytm-2J-ClQ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HeR-8d-0O1">
+                                <rect key="frame" x="20" y="72" width="560" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhl-BU-XyB">
+                                <rect key="frame" x="20" y="114" width="560" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HeR-8d-0O1" firstAttribute="leading" secondItem="Ytm-2J-ClQ" secondAttribute="leadingMargin" id="7jk-6N-Gw6"/>
+                            <constraint firstItem="HeR-8d-0O1" firstAttribute="top" secondItem="9hJ-KH-X1L" secondAttribute="bottom" constant="8" id="83q-WP-t29"/>
+                            <constraint firstItem="mhl-BU-XyB" firstAttribute="top" secondItem="HeR-8d-0O1" secondAttribute="bottom" constant="8" id="GqC-WH-zad"/>
+                            <constraint firstItem="mhl-BU-XyB" firstAttribute="trailing" secondItem="Ytm-2J-ClQ" secondAttribute="trailingMargin" id="jeV-IN-YOf"/>
+                            <constraint firstItem="mhl-BU-XyB" firstAttribute="leading" secondItem="Ytm-2J-ClQ" secondAttribute="leadingMargin" id="mx2-Nn-6lY"/>
+                            <constraint firstItem="HeR-8d-0O1" firstAttribute="trailing" secondItem="Ytm-2J-ClQ" secondAttribute="trailingMargin" id="sjS-Mt-BR3"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Package Confirmation" id="s4M-Da-22K">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="eHo-hY-NeP">
@@ -254,6 +306,10 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Done" id="riR-eA-8dG"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="PackageDetailsLabel" destination="mhl-BU-XyB" id="RfH-9b-l2g"/>
+                        <outlet property="PackageLocationLabel" destination="HeR-8d-0O1" id="W3a-Ij-vC9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bEL-oy-kma" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -441,7 +497,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d0R-7q-bPE" id="Z24-iy-D67">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
                                 </tableViewCellContentView>
@@ -508,7 +564,7 @@
                                         <rect key="frame" x="0.0" y="64" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e4i-zM-brd" id="Las-ai-ddx">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h94-FH-2Jf">
@@ -540,7 +596,7 @@
                                         <rect key="frame" x="0.0" y="108" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9an-0D-WT3" id="qUf-Q3-I4K">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lgk-pg-vqG">
@@ -572,7 +628,7 @@
                                         <rect key="frame" x="0.0" y="152" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6di-RP-7lX" id="h3A-HC-kSZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="To9-V4-xmh">
@@ -604,7 +660,7 @@
                                         <rect key="frame" x="0.0" y="196" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lYw-aV-FfE" id="tLc-Lm-eW8">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iHh-gV-6ez">
@@ -636,7 +692,7 @@
                                         <rect key="frame" x="0.0" y="240" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="82r-Aq-sCk" id="4MH-rQ-BFS">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B7L-3u-mAC">
@@ -668,7 +724,7 @@
                                         <rect key="frame" x="0.0" y="284" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aN9-Ny-gKA" id="GxO-9Q-g1w">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="KEf-yv-hUs">
@@ -815,7 +871,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GuK-vU-eFD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2967" y="-332"/>
+            <point key="canvasLocation" x="2937" y="-332"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Yuf-Dm-1bs">
@@ -899,9 +955,10 @@
         <image name="menu" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Yxz-J3-aFF"/>
+        <segue reference="HLx-fk-CzO"/>
+        <segue reference="cpb-NV-lVB"/>
+        <segue reference="ecx-Ju-BNI"/>
+        <segue reference="99I-XX-oeO"/>
         <segue reference="z7u-ig-8ub"/>
-        <segue reference="rPH-2j-Y0h"/>
-        <segue reference="Xr7-HA-6Tv"/>
     </inferredMetricsTieBreakers>
 </document>

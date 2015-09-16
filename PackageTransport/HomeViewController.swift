@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import CoreData
 
-class HomeViewController: UITableViewController, CancelButtonDelegate {
+class HomeViewController: UITableViewController {
     
     let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
 
@@ -39,17 +39,5 @@ class HomeViewController: UITableViewController, CancelButtonDelegate {
             print(error)
         }
         
-    }
-    //cancel button delegate requirement to dismiss the view controller
-    func cancelButtonPressedFrom(controller: UIViewController) {
-        dismissViewControllerAnimated(true, completion: nil)
-    }
-    //addnewpackage segue to cancel
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "AddNewPackage" {
-            let navigationController = segue.destinationViewController as! UINavigationController
-            let controller = navigationController.topViewController as! newPackageViewController
-            controller.cancelButtonDelegate = self
-        }
     }
 }

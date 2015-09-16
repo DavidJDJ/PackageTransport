@@ -7,23 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		222E420E1BA6BDC000E86915 /* navbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222E420D1BA6BDC000E86915 /* navbarViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		2245AB1F1BA6C7B30009DB12 /* PackageTransport.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2245AB1D1BA6C7B30009DB12 /* PackageTransport.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
-		2245AB261BA6F4670009DB12 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2245AB241BA6F4670009DB12 /* User+CoreDataProperties.swift */; settings = {ASSET_TAGS = (); }; };
-		2245AB271BA6F4670009DB12 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2245AB251BA6F4670009DB12 /* User.swift */; settings = {ASSET_TAGS = (); }; };
+		222E420E1BA6BDC000E86915 /* navbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222E420D1BA6BDC000E86915 /* navbarViewController.swift */; };
+		2245AB1F1BA6C7B30009DB12 /* PackageTransport.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2245AB1D1BA6C7B30009DB12 /* PackageTransport.xcdatamodeld */; };
+		2245AB261BA6F4670009DB12 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2245AB241BA6F4670009DB12 /* User+CoreDataProperties.swift */; };
+		2245AB271BA6F4670009DB12 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2245AB251BA6F4670009DB12 /* User.swift */; };
 		227C7A651BA24D9A0027740D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C7A641BA24D9A0027740D /* AppDelegate.swift */; };
-		227C7A6A1BA24D9A0027740D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227C7A681BA24D9A0027740D /* Main.storyboard */; };
 		227C7A6F1BA24D9A0027740D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 227C7A6E1BA24D9A0027740D /* Assets.xcassets */; };
 		227C7A721BA24D9A0027740D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227C7A701BA24D9A0027740D /* LaunchScreen.storyboard */; };
 		227C7A7D1BA24D9A0027740D /* PackageTransportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C7A7C1BA24D9A0027740D /* PackageTransportTests.swift */; };
 		227C7A881BA24D9A0027740D /* PackageTransportUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C7A871BA24D9A0027740D /* PackageTransportUITests.swift */; };
-		227C7AA51BA294BD0027740D /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 227C7AA41BA294BD0027740D /* SWRevealViewController.m */; settings = {ASSET_TAGS = (); }; };
-		227C7AA71BA297F20027740D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C7AA61BA297F20027740D /* HomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		227C7AA91BA299690027740D /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C7AA81BA299690027740D /* loginViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		227C7AAB1BA29AD40027740D /* registrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C7AAA1BA29AD40027740D /* registrationViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		228AE35C1BA7064000D34339 /* welcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228AE35B1BA7064000D34339 /* welcomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		228AE35F1BA7A77700D34339 /* driverHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228AE35E1BA7A77700D34339 /* driverHomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		227C7AA51BA294BD0027740D /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 227C7AA41BA294BD0027740D /* SWRevealViewController.m */; };
+		227C7AA71BA297F20027740D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C7AA61BA297F20027740D /* HomeViewController.swift */; };
+		227C7AA91BA299690027740D /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C7AA81BA299690027740D /* loginViewController.swift */; };
+		227C7AAB1BA29AD40027740D /* registrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227C7AAA1BA29AD40027740D /* registrationViewController.swift */; };
+		228AE35C1BA7064000D34339 /* welcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228AE35B1BA7064000D34339 /* welcomeViewController.swift */; };
+		228AE35F1BA7A77700D34339 /* driverHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228AE35E1BA7A77700D34339 /* driverHomeViewController.swift */; };
 		C4379CEA1BA39B7000E9B173 /* newPackageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4379CE91BA39B7000E9B173 /* newPackageViewController.swift */; };
+		C4B650141BA8C8AD008D3301 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4B650121BA8C8AD008D3301 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +50,6 @@
 		2245AB251BA6F4670009DB12 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		227C7A611BA24D9A0027740D /* PackageTransport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PackageTransport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		227C7A641BA24D9A0027740D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		227C7A691BA24D9A0027740D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		227C7A6E1BA24D9A0027740D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		227C7A711BA24D9A0027740D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		227C7A731BA24D9A0027740D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -69,6 +68,7 @@
 		228AE35B1BA7064000D34339 /* welcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = welcomeViewController.swift; sourceTree = "<group>"; };
 		228AE35E1BA7A77700D34339 /* driverHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = driverHomeViewController.swift; sourceTree = "<group>"; };
 		C4379CE91BA39B7000E9B173 /* newPackageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newPackageViewController.swift; sourceTree = "<group>"; };
+		C4B650131BA8C8AD008D3301 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,9 +122,9 @@
 			isa = PBXGroup;
 			children = (
 				227C7A641BA24D9A0027740D /* AppDelegate.swift */,
-				227C7A681BA24D9A0027740D /* Main.storyboard */,
 				222E420D1BA6BDC000E86915 /* navbarViewController.swift */,
 				C4379CE91BA39B7000E9B173 /* newPackageViewController.swift */,
+				C4B650121BA8C8AD008D3301 /* Main.storyboard */,
 				228AE35D1BA7A76100D34339 /* driverFiles */,
 				228AE35B1BA7064000D34339 /* welcomeViewController.swift */,
 				227C7AA81BA299690027740D /* loginViewController.swift */,
@@ -279,9 +279,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4B650141BA8C8AD008D3301 /* Main.storyboard in Resources */,
 				227C7A721BA24D9A0027740D /* LaunchScreen.storyboard in Resources */,
 				227C7A6F1BA24D9A0027740D /* Assets.xcassets in Resources */,
-				227C7A6A1BA24D9A0027740D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,20 +353,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		227C7A681BA24D9A0027740D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				227C7A691BA24D9A0027740D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		227C7A701BA24D9A0027740D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				227C7A711BA24D9A0027740D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C4B650121BA8C8AD008D3301 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C4B650131BA8C8AD008D3301 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
