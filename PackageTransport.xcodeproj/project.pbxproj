@@ -23,6 +23,7 @@
 		228AE35C1BA7064000D34339 /* welcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228AE35B1BA7064000D34339 /* welcomeViewController.swift */; };
 		228AE35F1BA7A77700D34339 /* driverHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228AE35E1BA7A77700D34339 /* driverHomeViewController.swift */; };
 		C4379CEA1BA39B7000E9B173 /* newPackageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4379CE91BA39B7000E9B173 /* newPackageViewController.swift */; };
+		C446EB731BAA819600B78E73 /* newPackageConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C446EB721BAA819600B78E73 /* newPackageConfirmationViewController.swift */; };
 		C4B650141BA8C8AD008D3301 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4B650121BA8C8AD008D3301 /* Main.storyboard */; };
 		C4B6505B1BA95FDC008D3301 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4B6505A1BA95FDC008D3301 /* MapKit.framework */; };
 		C4B6505D1BA95FE4008D3301 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4B6505C1BA95FE4008D3301 /* CoreLocation.framework */; };
@@ -70,6 +71,7 @@
 		228AE35B1BA7064000D34339 /* welcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = welcomeViewController.swift; sourceTree = "<group>"; };
 		228AE35E1BA7A77700D34339 /* driverHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = driverHomeViewController.swift; sourceTree = "<group>"; };
 		C4379CE91BA39B7000E9B173 /* newPackageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newPackageViewController.swift; sourceTree = "<group>"; };
+		C446EB721BAA819600B78E73 /* newPackageConfirmationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newPackageConfirmationViewController.swift; sourceTree = "<group>"; };
 		C4B650131BA8C8AD008D3301 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C4B6505A1BA95FDC008D3301 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C4B6505C1BA95FE4008D3301 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -128,9 +130,9 @@
 		227C7A631BA24D9A0027740D /* PackageTransport */ = {
 			isa = PBXGroup;
 			children = (
+				C446EB741BAA820200B78E73 /* UserFiles */,
 				227C7A641BA24D9A0027740D /* AppDelegate.swift */,
 				222E420D1BA6BDC000E86915 /* navbarViewController.swift */,
-				C4379CE91BA39B7000E9B173 /* newPackageViewController.swift */,
 				C4B650121BA8C8AD008D3301 /* Main.storyboard */,
 				228AE35D1BA7A76100D34339 /* driverFiles */,
 				228AE35B1BA7064000D34339 /* welcomeViewController.swift */,
@@ -180,6 +182,15 @@
 				228AE35E1BA7A77700D34339 /* driverHomeViewController.swift */,
 			);
 			name = driverFiles;
+			sourceTree = "<group>";
+		};
+		C446EB741BAA820200B78E73 /* UserFiles */ = {
+			isa = PBXGroup;
+			children = (
+				C4379CE91BA39B7000E9B173 /* newPackageViewController.swift */,
+				C446EB721BAA819600B78E73 /* newPackageConfirmationViewController.swift */,
+			);
+			name = UserFiles;
 			sourceTree = "<group>";
 		};
 		C4B6505E1BA95FF4008D3301 /* Frameworks */ = {
@@ -326,6 +337,7 @@
 				227C7A651BA24D9A0027740D /* AppDelegate.swift in Sources */,
 				227C7AAB1BA29AD40027740D /* registrationViewController.swift in Sources */,
 				222E420E1BA6BDC000E86915 /* navbarViewController.swift in Sources */,
+				C446EB731BAA819600B78E73 /* newPackageConfirmationViewController.swift in Sources */,
 				227C7AA51BA294BD0027740D /* SWRevealViewController.m in Sources */,
 				228AE35F1BA7A77700D34339 /* driverHomeViewController.swift in Sources */,
 				C4379CEA1BA39B7000E9B173 /* newPackageViewController.swift in Sources */,

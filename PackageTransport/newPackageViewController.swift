@@ -10,33 +10,51 @@ import UIKit
 import CoreLocation
 import MapKit
  
-class newPackageViewController: UIViewController, CLLocationManagerDelegate {
+class newPackageViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDelegate {
     
     //variables for getting current location
     var locationManager = CLLocationManager()
     var myPosition = CLLocationCoordinate2D()
     var locCoord = CLLocationCoordinate2D()
     
+    //variables for performing map searches
+    var searchController:UISearchController!
+    var annotation:MKAnnotation!
+    var localSearchRequest:MKLocalSearchRequest!
+    var localSearch:MKLocalSearch!
+    var localSearchResponse:MKLocalSearchResponse!
+    var error:NSError!
+    var pointAnnotation:MKPointAnnotation = MKPointAnnotation()
+    var pinAnnotationView:MKPinAnnotationView!
+    
+    @IBAction func addNewPackageNextButton(sender: UIBarButtonItem) {
+        print(pointAnnotation.coordinate.longitude.hashValue)
+        if pointAnnotation.coordinate.longitude.hashValue != 0 && PackageLocationTextField.text != "" {
+            performSegueWithIdentifier("PackageLocationNextButton", sender: nil)
+        }
+    }
     //label and button for showing coordinates
     
     @IBOutlet weak var LocationLabel: UILabel!
     
     @IBAction func getLocationButtonPressed(sender: UIButton) {
-        
         locationManager.startUpdatingLocation()
     }
     
     //variables for package location and details
     var packageLocation: String = ""
-    var packageDetails: String = ""
     @IBOutlet weak var PackageLocationTextField: UITextField!
-    @IBOutlet weak var PackageDetailsTextField: UITextField!
-    @IBOutlet weak var PackageLocationLabel: UILabel!
-    @IBOutlet weak var PackageDetailsLabel: UILabel!
     
     //package location map
     @IBOutlet weak var PackageLocationMapView: MKMapView!
     
+    @IBAction func showSearchBar(sender: AnyObject) {
+        searchController = UISearchController(searchResultsController: nil)
+        searchController.hidesNavigationBarDuringPresentation = false
+        self.searchController.searchBar.delegate = self
+        presentViewController(searchController, animated: true, completion: nil)
+        
+    }
     
     
     override func viewDidLoad() {
@@ -45,27 +63,28 @@ class newPackageViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
-        
-        
-        //making sure labels aren't empty
-        if packageLocation != "" && packageDetails != "" {
-            PackageLocationLabel.text = packageLocation
-            PackageDetailsLabel.text = packageDetails
-        }
+
         
     }
     //setting up segues
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "PackageLocationNextButton" {
+           
             let controller = segue.destinationViewController as! UINavigationController
-            let addEventViewController = controller.topViewController as! newPackageViewController
+            
+            let addEventViewController = controller.topViewController as! newPackageConfirmationViewController
+            
+            addEventViewController.pickup = myPosition
+           
+            addEventViewController.dropoff = pointAnnotation.coordinate
+             print("testing")
+//            print(myPosition)
+//            print(pointAnnotation.coordinate)
+            
             addEventViewController.packageLocation = PackageLocationTextField.text!
-        } else if segue.identifier == "PackageDetailsNextButton" {
-            let controller = segue.destinationViewController as! UINavigationController
-            let addEventViewController = controller.topViewController as! newPackageViewController
-            addEventViewController.packageLocation = packageLocation
-            addEventViewController.packageDetails = PackageDetailsTextField.text!
+            
         }
+        
     }
     
     
@@ -92,4 +111,37 @@ class newPackageViewController: UIViewController, CLLocationManagerDelegate {
         
     }
     
+    //function to perform search using search bar
+    func searchBarSearchButtonClicked(searchBar: UISearchBar){
+        //if pin already exists remove current pin
+        searchBar.resignFirstResponder()
+        dismissViewControllerAnimated(true, completion: nil)
+        if self.PackageLocationMapView.annotations.count != 0{
+            annotation = self.PackageLocationMapView.annotations[0] as! MKAnnotation
+            self.PackageLocationMapView.removeAnnotation(annotation)
+            print("testing remove")
+        }
+        //convert to natural language query
+        localSearchRequest = MKLocalSearchRequest()
+        localSearchRequest.naturalLanguageQuery = searchBar.text
+        localSearch = MKLocalSearch(request: localSearchRequest)
+        localSearch.startWithCompletionHandler { (localSearchResponse, error) -> Void in
+            
+            if localSearchResponse == nil{
+                var alert = UIAlertView(title: nil, message: "Place not found", delegate: self, cancelButtonTitle: "Try again")
+                alert.show()
+                return
+            }
+            //if search is a vaild 2d point, drop a pin on that specific long and lat
+            self.pointAnnotation = MKPointAnnotation()
+            self.pointAnnotation.title = searchBar.text
+            self.pointAnnotation.coordinate = CLLocationCoordinate2D(latitude: localSearchResponse!.boundingRegion.center.latitude, longitude:     localSearchResponse!.boundingRegion.center.longitude)
+            
+            
+            self.pinAnnotationView = MKPinAnnotationView(annotation: self.pointAnnotation, reuseIdentifier: nil)
+            self.PackageLocationMapView.centerCoordinate = self.pointAnnotation.coordinate
+            self.PackageLocationMapView.addAnnotation(self.pinAnnotationView.annotation!)
+            
+        }
+    }
 }
