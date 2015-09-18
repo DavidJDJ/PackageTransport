@@ -143,7 +143,7 @@ class registrationViewController: UITableViewController, UITextFieldDelegate {
                 print(error)
             }
 
-            if let urlToReq = NSURL(string: "http://192.168.1.126:8000/user/add") {
+            if let urlToReq = NSURL(string: "http://192.168.1.165:8000/user/add") {
                 let request: NSMutableURLRequest = NSMutableURLRequest(URL: urlToReq)
                 let session = NSURLSession.sharedSession()
                 request.HTTPMethod = "POST"

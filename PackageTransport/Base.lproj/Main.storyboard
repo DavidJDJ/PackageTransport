@@ -95,6 +95,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Driver Home Page" id="VnX-wp-BEo">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="byb-Z2-AfS"/>
                         <barButtonItem key="rightBarButtonItem" title="Find" id="ZoB-Nc-7w8">
                             <connections>
                                 <segue destination="Hig-0d-ZR9" kind="show" id="wjm-vV-fHr"/>
@@ -104,6 +105,7 @@
                     <connections>
                         <outlet property="EndTimeLabel" destination="v6J-h3-VIX" id="Tji-uH-gHj"/>
                         <outlet property="StartTimeLabel" destination="cXh-55-6Rw" id="tX1-j0-iWi"/>
+                        <outlet property="menuButton" destination="byb-Z2-AfS" id="niK-d7-gfa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ri6-c0-XkZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1087,10 +1089,10 @@
         <image name="menu" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="z7u-ig-8ub"/>
+        <segue reference="7sg-A8-lSV"/>
         <segue reference="Xr7-HA-6Tv"/>
+        <segue reference="6xc-8q-9uQ"/>
         <segue reference="hQC-7n-gSt"/>
         <segue reference="ecx-Ju-BNI"/>
-        <segue reference="o4H-mz-9tI"/>
     </inferredMetricsTieBreakers>
 </document>
