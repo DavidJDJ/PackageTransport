@@ -1,0 +1,9 @@
+{
+  "name": "PackageTransport",
+  "version": "0.0.1",
+  "dependencies": {
+    "body-parser": "latest",
+    "express": "^4.10.0",
+    "mongoose": "^4.0.1"
+  }
+}
