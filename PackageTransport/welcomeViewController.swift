@@ -20,7 +20,7 @@ class welcomeViewController: UIViewController {
         
         self.welcomeLabel.alpha = 0
         self.messageLabel.alpha = 0
-        self.messageLabel.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        self.messageLabel.text = "Welcome To Transit"
         self.beginButton.alpha = 0
     }
     

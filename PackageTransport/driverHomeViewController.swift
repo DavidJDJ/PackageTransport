@@ -8,10 +8,20 @@
 
 import Foundation
 
-class driverHomeViewController: UITableViewController {
+class driverHomeViewController: UIViewController {
     
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
+    
+    @IBOutlet weak var StartTimeLabel: UILabel!
+    @IBOutlet weak var EndTimeLabel: UILabel!
+    
+    @IBAction func startTimeTextField(sender: UITextField) {
+    }
+    
+    @IBAction func endTimeTextField(sender: UITextField) {
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
