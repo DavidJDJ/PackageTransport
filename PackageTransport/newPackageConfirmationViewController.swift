@@ -22,9 +22,9 @@ class newPackageConfirmationViewController: UIViewController {
     
     override func viewDidLoad() {
         print(pickup)
-        PickupLabel.text = "pickup:\(pickup.longitude , pickup.latitude)"
+        PickupLabel.text = String(format: "pickup: %.2f, %.2f", pickup.longitude, pickup.latitude)
         print(dropoff)
-        DropoffLabel.text = "dropoff:\(dropoff.longitude, dropoff.latitude)"
+        DropoffLabel.text = String(format: "dropoff: %.2f, %.2f", dropoff.longitude, dropoff.latitude)
         print(packageLocation)
         PackageLocationLabel.text = packageLocation
     }

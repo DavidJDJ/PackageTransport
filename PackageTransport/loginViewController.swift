@@ -90,7 +90,7 @@ class loginViewController: UITableViewController, UITextFieldDelegate {
             }
             
             emailErrorLabel.text = ""
-            if let urlToReq = NSURL(string: "http://192.168.1.165:8000/user/find") {
+            if let urlToReq = NSURL(string: "http://169.233.170.182:8000/user/find") {
                 let request : NSMutableURLRequest = NSMutableURLRequest(URL: urlToReq)
                 let session = NSURLSession.sharedSession()
                 request.HTTPMethod = "POST"
